@@ -6,4 +6,9 @@
 
 export class InfoComponent {
 
+    pageHeading: string
+
+    constructor() {
+        this.pageHeading = "Info page heading content";
+    }
 }

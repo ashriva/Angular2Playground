@@ -1,8 +1,8 @@
-﻿import { Component, ModuleWithProviders } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { ConstantService } from './Utilities/constantService';
 import { HttpService } from './Utilities/httpService';
-import { Routes, RouterModule }   from '@angular/router';
-import { InfoComponent } from './info/info.component';
+
+import { Router }   from '@angular/router';
 
 @Component({
     selector: 'app-container',
@@ -17,7 +17,7 @@ export class AppComponent {
     out: string[];
     out2: number[];
 
-    constructor(private constantService: ConstantService, private httpService: HttpService) {
+    constructor(private constantService: ConstantService, private httpService: HttpService, private router: Router) {
         this.type = "I need";
         this.items = ["Monitor", "Keyboard", "Mouse"];
         this.out = constantService.getSomeValues();
@@ -40,7 +40,7 @@ export class AppComponent {
                 this.items = ["Monitor", "Keyboard", "Mouse"];
                 break;
             case "route":
-                
+                this.router.navigate(['/detail']);
                 break;
             default:
                 this.items = [];
