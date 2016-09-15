@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
 import { DetailComponent } from './detail/detail.component';
 import { HomeComponent } from './home/home.component';
-
 import { routing } from './app.routing';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, routing],
+    imports: [NgbModule,BrowserModule, FormsModule, routing],
     declarations: [AppComponent, InfoComponent, DetailComponent, HomeComponent],
     bootstrap: [AppComponent]
 })

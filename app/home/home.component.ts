@@ -16,8 +16,8 @@ export class HomeComponent {
     out2: number[];
 
     constructor(private constantService: ConstantService, private httpService: HttpService, private router: Router) {
-        this.type = "I need";
-        this.items = ["Monitor", "Keyboard", "Mouse"];
+        this.type = "Left Column Items";
+        this.items = ["Item 1", "Item 2", "Item 3"];
         this.out = constantService.getSomeValues();
         this.out2 = httpService.getSomeHttpValue();
     }
@@ -35,7 +35,7 @@ export class HomeComponent {
                 }
                 break;
             case "reset":
-                this.items = ["Monitor", "Keyboard", "Mouse"];
+                this.items = ["Item 1", "Item 2", "Item 3"];
                 break;
             case "routeToDetail":
                 this.router.navigate(['/detail']);
